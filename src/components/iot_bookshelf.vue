@@ -27,7 +27,8 @@ export default {
     return {
       brightness: 50,
       spectrum_width: 50,
-      speed: 50
+      speed: 50,
+      direction: 0
     }
   },
 
