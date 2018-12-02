@@ -1,6 +1,6 @@
 from nginx:alpine
 
-copy dist /www/
+copy dist /usr/share/nginx/html
 
 expose 80
 expose 443
