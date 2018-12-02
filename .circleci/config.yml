@@ -32,7 +32,7 @@ jobs:
           key: v2-dependencies-{{ checksum "package-lock.json" }}
 
       - run: npm audit
-      - run: npm lint
+      - run: npm run lint
 
       - setup_remote_docker
       - deploy:
