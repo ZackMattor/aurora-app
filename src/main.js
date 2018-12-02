@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import VueTouch from 'vue-touch'
 
-var connection = new WebSocket('ws://127.0.0.1:8081');
+var connection = new WebSocket('ws://zackmattor.com:8081');
 console.log('connecting');
 
 // Global Vars
