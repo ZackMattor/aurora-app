@@ -32,7 +32,7 @@ export default {
       console.log('touchstart');
     },
 
-    onStart(evt) {
+    onStart() {
       //this.isActive = true;
       this.startPan = this.percent;
     },

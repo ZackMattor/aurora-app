@@ -1,24 +1,17 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
+import App from './App.vue'
 import router from './router'
 import VueTouch from 'vue-touch'
 
-var connection = new WebSocket('ws://zackmattor.com:8081');
+let connection = new WebSocket('ws://zackmattor.com:8081');
 console.log('connecting');
 
-// Global Vars
+// Configure Vue instance
 Vue.prototype['$connection'] = connection;
-
 Vue.use(VueTouch, {name: 'v-touch'})
-
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
-})
+  render: h => h(App)
+}).$mount('#app')
